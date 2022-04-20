@@ -6,20 +6,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { FormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-// import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeComponent } from './home/home.component';
+import { InvoiceComponent } from './invoice/invoice.component';
+import { MatTableModule } from '@angular/material/table';
+import { InvoiceDetailsComponent } from './invoice/invoice-details/invoice-details.component'  
+import { HttpClientModule } from '@angular/common/http';
+import { AddInvoiceComponent } from './invoice/add-invoice/add-invoice.component';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
-    HomeComponent
+    HomeComponent,
+    InvoiceComponent,
+    InvoiceDetailsComponent,
+    AddInvoiceComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +39,11 @@ import { HomeComponent } from './home/home.component';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    //FlexLayoutModule
+    FlexLayoutModule,
+    MatTableModule,
+    HttpClientModule,
+    FormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

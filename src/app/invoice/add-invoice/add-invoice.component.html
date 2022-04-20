@@ -1,0 +1,59 @@
+<div id="navBarContainer" fxLayout="column" >
+    <button mat-button color="basic" fxLayoutAlign="start start" style="margin-top: 20px;">Products</button>
+    <button mat-button color="basic" fxLayoutAlign="start start">Clients</button>
+    <button mat-button color="basic" fxLayoutAlign="start start">Suppliers</button>
+    <button mat-button color="basic" class="active" fxLayoutAlign="start start" [routerLink]="['/invoice']">Factures</button>
+
+    <button mat-button color="basic" fxLayoutAlign="start start">logout</button>
+</div>
+<div id="carosselsContainer" fxLayout="column" fxLayoutAlign="space-around stretch" class="container">
+    <section class="sample-app-content">
+        <form #myForm="ngForm" (ngSubmit)="onSubmitTemplateBased()">
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <mat-form-field appearance="fill">
+                    <mat-label>Client</mat-label>
+                    <mat-select (valueChange)="changeClient($event)">
+                        <mat-option value="Alaeddine">Bouhajja Alaeddine</mat-option>
+                        <mat-option value="Ala">Mohamed Ala</mat-option>
+                        <mat-option value="Chiraz">Chiraz</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-around center">
+                <mat-form-field appearance="fill">
+                    <mat-label>Company Name</mat-label>
+                    <input matInput [(ngModel)]="client.entreprise" required name="entreprise" disabled>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Company Tel</mat-label>
+                    <input matInput [(ngModel)]="client.tel" required name="tel"disabled>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Company Email</mat-label>
+                    <input matInput [(ngModel)]="client.email" required name="email" disabled>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Company loction</mat-label>
+                    <input matInput [(ngModel)]="client.location" required name="location" disabled>
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-around center">
+                <mat-form-field appearance="fill">
+                    <mat-label>payment methode</mat-label>
+                    <mat-select [(ngModel)]="methode" name="methode">
+                        <mat-option value="Cash">Cash</mat-option>
+                        <mat-option value="Creadit card">Creadit card</mat-option>
+                        <mat-option value="Mobile points">Mobile points</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            <mat-form-field appearance="fill">
+            <mat-label>Tax value</mat-label>
+                <input matInput [(ngModel)]="tax" required name="tax">
+            </mat-form-field>
+            </div>
+            <p fxLayout="row" fxLayoutAlign="center center">
+                <button type="submit" [disabled]="!myForm.valid">Submit</button>
+            </p>
+        </form>
+    </section>
+</div>
