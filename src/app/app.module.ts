@@ -19,6 +19,8 @@ import { InvoiceDetailsComponent } from './invoice/invoice-details/invoice-detai
 import { HttpClientModule } from '@angular/common/http';
 import { AddInvoiceComponent } from './invoice/add-invoice/add-invoice.component';
 import { MatSelectModule } from '@angular/material/select';
+import { EmployeesComponent } from './employees/employees.component';
+import { AddEmployeesComponent } from './employees/add-employees/add-employees.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { MatSelectModule } from '@angular/material/select';
     HomeComponent,
     InvoiceComponent,
     InvoiceDetailsComponent,
-    AddInvoiceComponent
+    AddInvoiceComponent,
+    EmployeesComponent,
+    AddEmployeesComponent
   ],
   imports: [
     CommonModule,
