@@ -1,0 +1,52 @@
+<div id="navBarContainer" fxLayout="column" >
+    <button mat-button color="basic" fxLayoutAlign="start start" style="margin-top: 20px;">Products</button>
+    <button mat-button color="basic" fxLayoutAlign="start start">Clients</button>
+    <button mat-button color="basic" fxLayoutAlign="start start" [routerLink]="['/supplier']">Suppliers</button>
+    <button mat-button color="basic" fxLayoutAlign="start start" [routerLink]="['/invoice']">Factures</button>
+    <button mat-button color="basic" class="active" fxLayoutAlign="start start" [routerLink]="['/employees']">Employees</button>
+    <button mat-button color="basic" fxLayoutAlign="start start">logout</button>
+</div>
+<div id="carosselsContainer" fxLayout="column" fxLayoutAlign="space-around stretch" class="container">
+    <section class="sample-app-content">
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <div>
+                Name:
+            </div>
+            <div>
+                Alaeddine
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <div>
+                Surname:
+            </div>
+            <div>
+                Bouhajja
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <div>
+                Position:
+            </div>
+            <div>
+                CO
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <div>
+                Salary:
+            </div>
+            <div>
+                2500
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <div>
+                Hiring date:
+            </div>
+            <div>
+                25-03-1996
+            </div>
+        </div>
+    </section>
+</div>

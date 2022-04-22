@@ -1,7 +1,7 @@
 <div id="navBarContainer" fxLayout="column" >
     <button mat-button color="basic" fxLayoutAlign="start start" style="margin-top: 20px;">Products</button>
     <button mat-button color="basic" fxLayoutAlign="start start">Clients</button>
-    <button mat-button color="basic" fxLayoutAlign="start start">Suppliers</button>
+    <button mat-button color="basic" fxLayoutAlign="start start" [routerLink]="['/supplier']">Suppliers</button>
     <button mat-button color="basic" class="active" fxLayoutAlign="start start">Factures</button>
     <button mat-button color="basic"  fxLayoutAlign="start start" [routerLink]="['/employees']">Employees</button>
     <button mat-button color="basic" fxLayoutAlign="start start">logout</button>

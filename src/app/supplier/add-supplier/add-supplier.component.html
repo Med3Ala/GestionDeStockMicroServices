@@ -1,0 +1,50 @@
+<div id="navBarContainer" fxLayout="column">
+    <button mat-button color="basic" fxLayoutAlign="start start" style="margin-top: 20px;">Products</button>
+    <button mat-button color="basic" fxLayoutAlign="start start">Clients</button>
+    <button mat-button color="basic" class="active"  fxLayoutAlign="start start" [routerLink]="['/supplier']">Suppliers</button>
+    <button mat-button color="basic"  fxLayoutAlign="start start" [routerLink]="['/invoice']">Factures</button>
+    <button mat-button color="basic"  fxLayoutAlign="start start" [routerLink]="['/employees']">Employees</button>
+    <button mat-button color="basic" fxLayoutAlign="start start">logout</button>
+</div>
+
+
+<div id="carosselsContainer" fxLayout="column" fxLayoutAlign="space-around stretch">
+    <section class="sample-app-content">
+        <div>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <h2>Add Supplier</h2>
+            </div> 
+        </div>
+        <div>
+            <section class="sample-app-content">
+                <form #myForm="ngForm" (ngSubmit)="onSubmitTemplateBased()">
+                    <div fxLayout="row" fxLayoutAlign="space-around center">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Name</mat-label>
+                            <input matInput [(ngModel)]="supplier.name" required name="name">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>company</mat-label>
+                            <input matInput [(ngModel)]="supplier.company" required name="company">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Tel</mat-label>
+                            <input matInput [(ngModel)]="supplier.tel" required name="tel" type="number">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>location</mat-label>
+                            <input matInput [(ngModel)]="supplier.location" required name="location">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>email</mat-label>
+                            <input matInput [(ngModel)]="supplier.email" required name="email">
+                        </mat-form-field>
+                    </div>
+                    <p fxLayout="row" fxLayoutAlign="center center">
+                        <button type="submit" [disabled]="!myForm.valid">Submit</button>
+                    </p>
+                </form>
+            </section>
+        </div>
+    </section>
+</div>

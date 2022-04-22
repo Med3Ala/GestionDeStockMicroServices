@@ -1,7 +1,7 @@
 <div id="navBarContainer" fxLayout="column" >
     <button mat-button color="basic" fxLayoutAlign="start start" style="margin-top: 20px;">Products</button>
     <button mat-button color="basic" fxLayoutAlign="start start">Clients</button>
-    <button mat-button color="basic" fxLayoutAlign="start start">Suppliers</button>
+    <button mat-button color="basic" fxLayoutAlign="start start" [routerLink]="['/supplier']">Suppliers</button>
     <button mat-button color="basic" fxLayoutAlign="start start" [routerLink]="['/invoice']">Factures</button>
     <button mat-button color="basic" class="active" fxLayoutAlign="start start" [routerLink]="['/employees']">Employees</button>
     <button mat-button color="basic" fxLayoutAlign="start start">logout</button>
@@ -14,7 +14,38 @@
             </div> 
         </div>
         <div>
-
+            <section class="sample-app-content">
+                <form #myForm="ngForm" (ngSubmit)="onSubmitTemplateBased()">
+                    <div fxLayout="row" fxLayoutAlign="space-around center">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Name</mat-label>
+                            <input matInput [(ngModel)]="employee.name" required name="name">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Surname</mat-label>
+                            <input matInput [(ngModel)]="employee.surname" required name="tel">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Salairy</mat-label>
+                            <input matInput [(ngModel)]="employee.salairy" required name="salairy" type="number">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Position</mat-label>
+                            <input matInput [(ngModel)]="employee.position" required name="position">
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Hiring date</mat-label>
+                            <input matInput [matDatepicker]="picker" [(ngModel)]="employee.hiring_date" >
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <p fxLayout="row" fxLayoutAlign="center center">
+                        <button type="submit" [disabled]="!myForm.valid">Submit</button>
+                    </p>
+                </form>
+            </section>
         </div>
     </section>
 </div>

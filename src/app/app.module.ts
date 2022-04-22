@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
@@ -21,6 +21,10 @@ import { AddInvoiceComponent } from './invoice/add-invoice/add-invoice.component
 import { MatSelectModule } from '@angular/material/select';
 import { EmployeesComponent } from './employees/employees.component';
 import { AddEmployeesComponent } from './employees/add-employees/add-employees.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { EmployeeDetailComponent } from './employees/employee-detail/employee-detail.component';
+import { SupplierComponent } from './supplier/supplier.component';
+import { AddSupplierComponent } from './supplier/add-supplier/add-supplier.component';
 
 
 @NgModule({
@@ -32,7 +36,10 @@ import { AddEmployeesComponent } from './employees/add-employees/add-employees.c
     InvoiceDetailsComponent,
     AddInvoiceComponent,
     EmployeesComponent,
-    AddEmployeesComponent
+    AddEmployeesComponent,
+    EmployeeDetailComponent,
+    SupplierComponent,
+    AddSupplierComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +54,9 @@ import { AddEmployeesComponent } from './employees/add-employees/add-employees.c
     MatTableModule,
     HttpClientModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
